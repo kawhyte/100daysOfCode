@@ -8,6 +8,9 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+button {
+    font-family: 'Poppins', sans-serif;
+}
 
 header {
 background-color:red;
@@ -70,16 +73,63 @@ text-decoration: none;
 
 .presentation{
  display: flex;
+ width: 90%;
+ background-color: lightgray;
+ margin: auto;
+ min-height: 80vh;
+ align-items: center;
 }
 
 .introduction{
+    flex:1;
 
     background-color: lightcoral;
 }
+.intro-text{
 
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494949, #6f6f89);
+    -webkit-background-clip:text ;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p{
+
+    margin-top: 5px;
+    font-size: 22px;
+    color: #585772;
+}
+
+.cta{
+
+    padding:50px 0px 0px 0px ;
+}
+
+.cta-select{
+
+    border: 2px solid pink;
+    background: transparent;
+    color: pink;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-add{
+background:pink ;
+width: 150px;
+height: 50px;
+cursor: pointer;
+font-size: 16px;
+border: none;
+color: white;
+margin: 30px 0px 0px 30px  
+}
 .cover {
-
-    background-color: lightgray;
+flex:1;
+    
 }
 .cover img {
 
