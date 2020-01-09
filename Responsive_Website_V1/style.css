@@ -32,9 +32,9 @@ background: lightblue;
 flex: 1
 }
 
-img{
+/* img{
 border: dotted;
-}
+} */
 
 .logo {
     
@@ -129,9 +129,37 @@ margin: 30px 0px 0px 30px
 }
 .cover {
 flex:1;
-    
+display: flex;
+justify-content: center;
+height: 60vh;
 }
 .cover img {
-
-   height: 55vh;
+height: 100%;
+   
+   filter: drop-shadow(0px 5px 3px black);
 }
+
+@media screen and ( max-width:1388px){
+
+   .presentation{
+       flex-direction: column;
+   }
+   .introduction{
+       margin-top: 5vh;
+       text-align: center;
+   }
+   .intro-text h1{
+       font-size: 30px;
+   }
+   .intro-text p {
+    font-size: 18px;
+}
+.cta{
+    padding: 10px 0px 0px 0px;
+}
+
+.cover img{
+ height: 80%;
+}
+}
+
