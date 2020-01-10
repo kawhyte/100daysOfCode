@@ -29,7 +29,7 @@ header {
 }
 
 .logo-container {
-  margin: 45px 0px 10px 55px;
+  margin: 30px 0px 10px 55px;
   background: lightpink;
   display: flex;
   height: 2.2vh;
@@ -73,11 +73,11 @@ background: lightblue;
 nav{
 
   display: flex;
-  margin: 15px 0px 5px 55px;
+  margin: 12px 0px 5px 55px;
 }
 
 .nav-links{
-  background: green;
+  /* background: green; */
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -90,6 +90,73 @@ nav{
  text-decoration: none;
 
  }
+
+ 
+
+ button.tablinks{
+  background-color: rgb(78, 24, 78);
+  /* background-color: white; */
+  border: none;
+  height: 40px;
+  padding: 10px 15px 10px 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 3px 3px 0px 0px;
+  }
+  
+  button.tablinks:hover {
+  cursor: pointer;
+  background-color:rgba(127, 91, 127, .3);
+  }
+  
+  button.launch {
+  background-color: #F9A300;
+  border: none;
+  height: 40px;
+  padding: 5px 15px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-right: 10px;
+  }
+  
+  button.launch:hover {
+  cursor: pointer;
+  background-color: #FABD44;
+  }
+  
+  button.change {
+  background-color: #F88F00;
+  border: none;
+  height: 40px;
+  padding: 5px 15px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-right: 10px;
+  }
+  
+  button.change:hover {
+  cursor: pointer;
+  background-color: #F89900;
+  }
+  
+  button:active {
+  outline: none;
+  border: none;
+  }
+  
+  button:focus {outline:0;}
+
+
+
+
 
  .about{
   background: lightpink;
