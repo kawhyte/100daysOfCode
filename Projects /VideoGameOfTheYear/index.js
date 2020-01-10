@@ -45,15 +45,15 @@ function openCity(evt, cityName, color) {
 
 function switchBlue() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "blue";
-  document.getElementsByTagName("body")[0].style.color = "white";
+  // document.getElementsByTagName("body")[0].style.color = "white";
 }
 
 function switchRed() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "red";
-  document.getElementsByTagName("body")[0].style.color = "white";
+  // document.getElementsByTagName("body")[0].style.color = "white";
 }
 
 function switchGray() {
   document.getElementsByTagName("header")[0].style.backgroundColor = "gray";
-  document.getElementsByTagName("body")[0].style.color = "white";
+  // document.getElementsByTagName("body")[0].style.color = "white";
 }

@@ -191,7 +191,7 @@ nav{
  }
 
  .main-area{
-background: lightcoral;
+/* background: lightcoral; */
   display: flex;
  width: 95%;
  height: 70vh;
@@ -201,7 +201,7 @@ background: lightcoral;
 
  .left-side{
 
-background: lightseagreen;
+/* background: lightseagreen; */
 flex:.7;
 margin:40px 20px 0px 0px;
 height: 60vh;
@@ -216,13 +216,13 @@ font-weight:50;
   font-weight:50;
    }
  .right-side{
-  background: rgb(57, 216, 33);
+  /* background: rgb(57, 216, 33); */
   flex:3;
   margin: 40px 0px 0px 10px
  }
 
  .filter-buttons{
-  background: rgb(236, 29, 29);
+  /* background: rgb(236, 29, 29); */
  display: flex;
  flex-direction: column;
  
@@ -244,7 +244,24 @@ font-weight:50;
   border: none;
  }
 
+ .foot-links{
+  /* background-color: rgb(194, 86, 193); */
+   display: flex;
+   align-content: space-around;
+   display: flex;
+   justify-content: space-evenly;
+   list-style: none;
+   width:25%;
+   margin-left: 15px;
+   
  
+ }
+
+ .foot-link{
+
+  list-style: none;
+  text-decoration: none;
+ }
  /* section{
    display: flex;
    flex:2;
