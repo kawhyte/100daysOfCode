@@ -13,7 +13,7 @@ button {
 }
 
 header {
-/* background-color:red; */
+/* background:red; */
  display: flex;
  width: 85%;
  height: 10vh;
