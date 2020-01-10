@@ -31,44 +31,65 @@
             <p class="sub-title">Produced by Rose Friedman, Petra Mayer, Beth Novey and Meghan Sullivan | Executive
                 Producer: Ellen Silva</p>
         </div>
-       
-
-            <nav>
-                <ul class="nav-links">
 
 
+        <nav>
+            <ul class="nav-links">
 
-                    <button class="tablinks" onclick="openCity(event, 'London')">2019</button>
-                    <button class="tablinks" onclick="openCity(event, 'Paris')">2018</button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">2017</button>
-                    <button class="tablinks" onclick="openCity(event, 'London')">2016</button>
-                    <button class="tablinks" onclick="openCity(event, 'Paris')">2015</button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">2014</button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">2013</button>
 
-                    <!-- <li><a class="nav-link" href="#">2019</a> </li>
+
+                <button class="tablinks" onclick="openCity(event, 'London', 'blue')">2019</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris', 'red')">2018</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo','gray')">2017</button>
+                <button class="tablinks" onclick="openCity(event, 'London')">2016</button>
+                <button class="tablinks" onclick="openCity(event, 'jam')">2015</button>
+                <button class="tablinks" onclick="openCity(event, 'T')">2014</button>
+                <button class="tablinks" onclick="openCity(event, 'T')">2013</button>
+
+                <!-- <li><a class="nav-link" href="#">2019</a> </li>
                     <li><a class="nav-link" href="#"> 2018</a> </li>
                     <li><a class="nav-link" href="#"> 2017</a> </li>
                     <li><a class="nav-link" href="#"> 2016</a> </li>
                     <li><a class="nav-link" href="#"> 2015</a> </li>
                     <li><a class="nav-link" href="#"> 2014</a> </li>
                     <li><a class="nav-link" href="#"> 2013</a> </li> -->
-                </ul>
+            </ul>
 
-                <div class="about">
-                    <button id="about">About</button>
-                    
-                </div>
-            </nav>
-       
+            <div class="about">
+                <button id="about">About</button>
+
+            </div>
+        </nav>
+
 
 
     </header>
+
+    <main>
+
+        <section>
+
+            <div id="London" class="tabcontent" data-color="blue">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+              </div>
+              
+              <div id="Paris" class="tabcontent" data-color="gray">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p> 
+              </div>
+              
+              <div id="Tokyo" class="tabcontent" data-color="yellow">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+        </section>
+    </main>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <script src="" async defer></script>
+    <script src="index.js" async defer></script>
 </body>
 
 </html>
