@@ -189,3 +189,63 @@ nav{
   border-radius: 3px 3px 3px 3px;
   
  }
+
+ .main-area{
+background: lightcoral;
+  display: flex;
+ width: 95%;
+ height: 70vh;
+ margin: auto;
+ align-items: flex-start;
+ }
+
+ .left-side{
+
+background: lightseagreen;
+flex:.7;
+margin:40px 20px 0px 0px;
+height: 60vh;
+ }
+
+ .left-side h1{
+font-size: 27px;
+font-weight:50;
+ }
+ .left-side p{
+  font-size: 16px;
+  font-weight:50;
+   }
+ .right-side{
+  background: rgb(57, 216, 33);
+  flex:3;
+  margin: 40px 0px 0px 10px
+ }
+
+ .filter-buttons{
+  background: rgb(236, 29, 29);
+ display: flex;
+ flex-direction: column;
+ 
+ height: 30vh;
+ justify-content: space-evenly;
+ /* align-items: stretch; */
+ 
+  
+ }
+
+ .btn{
+
+  height: 33px;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 10px;
+  color:white;
+  background-color: rgb(194, 86, 193);
+  border: none;
+ }
+
+ 
+ /* section{
+   display: flex;
+   flex:2;
+ } */ 
