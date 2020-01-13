@@ -146,7 +146,6 @@ let urls = [
 Promise.all(urls.map(url => fetch(url)))
   .then(resp => Promise.all(resp.map(r => r.json())))
   .then(data => {
-    // ...
     console.log(data);
 
     const html = data.map(generateHTML).join("");
@@ -154,11 +153,11 @@ Promise.all(urls.map(url => fetch(url)))
     gallery.innerHTML = html;
   });
 
-fetch("https://api.rawg.io/api/games")
-  //fetch("https://api.rawg.io/api/games?page_size=1&game=9767,27984")
-  .then(response => {
-    return response.json();
-  })
-  .then(myJson => {
-    console.log(myJson);
-  });
+// fetch("https://api.rawg.io/api/games")
+//   //fetch("https://api.rawg.io/api/games?page_size=1&game=9767,27984")
+//   .then(response => {
+//     return response.json();
+//   })
+//   .then(myJson => {
+//     console.log(myJson);
+//   });
