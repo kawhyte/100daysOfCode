@@ -38,7 +38,7 @@ button {
 
 header {
   background-color: rgb(78, 24, 78);
-  /* background-image: url(https://images.unsplash.com/photo-1494666144702-70d86c6cf884?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80); */
+  background-image: url(https://images.unsplash.com/photo-1494666144702-70d86c6cf884?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
@@ -55,15 +55,15 @@ header {
 
 
 .logo-container {
-  margin: 30px 0px 10px 55px;
+  margin: 30px 0px 10px 41px;
   /* background: lightpink; */
   display: flex;
-  height: 2.5vh;
+  height: 7vh;
 }
 
 .logo-img {
   /* background: lightgreen; */
-  margin: 0px 5px 0px 0px; 
+  margin: 0px; 
   height: 100%;
   /* filter: white; */
   /* color: white; */
@@ -71,7 +71,7 @@ header {
 
 .logo-container h4{
 /* background: lightblue; */
-/* margin: 55px 0px 10px 3px; */
+  margin: 60px 0px 0px 0px;
   color: white;
 
 }
@@ -80,6 +80,7 @@ header {
   /* background: lightblue; */
   margin: 0px 0px 5px 55px;
   color: white;
+  text-shadow: 2px 2px rgba(8, 8, 8, 0.2);
 
 } 
 
@@ -88,8 +89,6 @@ header {
   margin: 0px 0px 5px 0px;
   font-weight: 900;
   font-size: 50px;
-
-
 }
 .main-text p{
   /* background: green; */
@@ -108,13 +107,15 @@ nav{
   display: flex;
   justify-content: space-between;
   list-style: none;
-  flex:1
+  flex:1;
+  text-shadow: 2px 2px rgba(8, 8, 8, 0.2);
  } 
 
  .nav-link{
   color: white;
   font-size: 18px;
  text-decoration: none;
+ 
 
  }
 
@@ -132,7 +133,7 @@ nav{
   margin-top: 10px;
   margin-right: 10px;
   cursor: pointer;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 3px 3px;
   }
   
   button.tablinks:hover {
