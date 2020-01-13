@@ -87,8 +87,10 @@ function generateHTML(data) {
 }
 
 const data = [
-  { photolink:"http://is2.mzstatic.com/image/thumb/Music18/v4/5a/42/0f/5a420f73-6490-abc9-bdcc-3001d5c4e9fc/source/400x40000bb.png", gameName: "Mario Maker 2", year: "2019" },
+  { photolink:"http://is2.mzstatic.com/image/thumb/Music18/v4/5a/42/0f/5a420f73-6490-abc9-bdcc-3001d5c4e9fc/source/400x40000bb.png", gameName: "Mario Maker 2", year: "2019", alt: "gameAlt" },
   { photolink:"http://is3.mzstatic.com/image/thumb/Music62/v4/fa/ae/a6/faaea65f-0819-bb5d-afaa-4f5e84015204/source/400x40000bb.png", gameName: "Mario Brothers", year: "1997" },
+  { photolink:"http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png", gameName: "Mario Brothers 2", year: "1997" },
+  { photolink:"http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png", gameName: "Mario Brothers 2", year: "1997" },
   { photolink:"http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png", gameName: "Mario Brothers 2", year: "1997" }
  
 ];
