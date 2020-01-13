@@ -26,18 +26,7 @@ button {
 } */
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 5px 0;
-}
 
-p {
-  margin: 0 0 20px 0;
-}
 
 .close {
   background: none;
@@ -45,81 +34,7 @@ p {
   border: 0;
 }
 
-.gallery {
- 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  grid-auto-rows: 100px;
-  grid-auto-flow: dense;
-}
 
-
-.item {
-  overflow: hidden;
-  /* display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 1; */
-}
-
-/* .item.v2 {
-  grid-row: span 2;
-}
-
-.item.v3 {
-  grid-row: span 3;
-}
-
-.item.v4 {
-  grid-row: span 4;
-} */
-
-
-
-/* .item.h2 {
-  grid-column: span 2;
-}
-
-.item.h3 {
-  grid-column: span 3;
-}
-
-.item.h4 {
-  grid-column: span 4;
-} */
-
-.overlay {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.7);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  z-index: 2;
-}
-.overlay.open {
-  display: grid;
-}
-
-.overlay figure {
-  background: white;
-  width: 700px;
-  padding: 20px;
-}
-
-.overlay img {
-  width: 100%;
-}
-
-section.gallery{
-
-    display: grid;
-    /* grid-template-columns: 1fr; */
-    
-    /* align-items: center; */
-    justify-items: center; 
- 
- }
 
 header {
   background-color: rgb(78, 24, 78);
@@ -143,12 +58,12 @@ header {
   margin: 30px 0px 10px 55px;
   /* background: lightpink; */
   display: flex;
-  height: 2.2vh;
+  height: 2.5vh;
 }
 
 .logo-img {
   /* background: lightgreen; */
-  margin: 0px 5px 5px 0px; 
+  margin: 0px 5px 0px 0px; 
   height: 100%;
   /* filter: white; */
   /* color: white; */
