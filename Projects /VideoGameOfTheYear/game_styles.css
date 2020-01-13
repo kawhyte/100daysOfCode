@@ -7,14 +7,123 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+ 
+ 
+ 
 }
 
 button {
   font-family: 'Poppins', sans-serif;
 }
+/* main{
+
+
+}
+.gallery{
+
+  padding: 10px 50px 10px 10px
+
+} */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+.close {
+  background: none;
+  color: white;
+  border: 0;
+}
+
+.gallery {
+ 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+}
+
+
+.item {
+  overflow: hidden;
+  /* display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1; */
+}
+
+/* .item.v2 {
+  grid-row: span 2;
+}
+
+.item.v3 {
+  grid-row: span 3;
+}
+
+.item.v4 {
+  grid-row: span 4;
+} */
+
+
+
+/* .item.h2 {
+  grid-column: span 2;
+}
+
+.item.h3 {
+  grid-column: span 3;
+}
+
+.item.h4 {
+  grid-column: span 4;
+} */
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+.overlay.open {
+  display: grid;
+}
+
+.overlay figure {
+  background: white;
+  width: 700px;
+  padding: 20px;
+}
+
+.overlay img {
+  width: 100%;
+}
+
+section.gallery{
+
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    
+    /* align-items: center; */
+    justify-items: center; 
+ 
+ }
 
 header {
   background-color: rgb(78, 24, 78);
+  /* background-image: url(https://images.unsplash.com/photo-1494666144702-70d86c6cf884?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80); */
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
@@ -27,6 +136,8 @@ header {
   /* margin: auto; */
   /* align-items: center; */
 }
+
+
 
 .logo-container {
   margin: 30px 0px 10px 55px;
@@ -191,10 +302,10 @@ nav{
  }
 
  .main-area{
-/* background: lightcoral; */
+background: lightcoral;
   display: flex;
  width: 95%;
- height: 70vh;
+ height: 100vh;
  margin: auto;
  align-items: flex-start;
  }
@@ -215,10 +326,12 @@ font-weight:50;
   font-size: 16px;
   font-weight:50;
    }
+   
  .right-side{
   /* background: rgb(57, 216, 33); */
   flex:3;
-  margin: 40px 0px 0px 10px
+  margin: 40px 0px 0px 10px;
+  /* background: linear-gradient(to right, #F93D66, #6D47D9); */
  }
 
  .filter-buttons{
