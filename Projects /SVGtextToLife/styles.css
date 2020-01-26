@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+
+html {
+	background-color:blue;
+  }
+  body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+  }
+  
+  svg {
+	width: 400px;
+	height: 500px;
+	z-index: 999;
+  }
+  
+
+@media screen and (max-width:1200px){
+svg{
+
+	font-size: 4em;
+}
+}
