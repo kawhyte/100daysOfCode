@@ -2,33 +2,30 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Productivity Timer</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
-<div class="container">
-<div class="h3">Pomodoro Productivity Timer</div>
-<div>
-<p id= "timer"></p>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Productivity Timer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-</div>
-<button id ="startTimer" class="btn">Start</button>
+<body>
 
-</div>
-
-
-
-
-
-
+    <div class="container">
+        <h3>Pomodoro Productivity Timer</h3>
+        <div id="timer" class="timer">25:00</div>
+        <button id="get_Timer" class="btn">Start</button>
+        <button id="stop_Timer" class="btn btn-pause">Pause</button>
+        <button id="get_Timer" class="btn btn-reset">Reset</button>
         
-        <script src="main.js" async defer></script>
-    </body>
+    </div>
+    <script src="main.js" async defer></script>
+</body>
+
 </html>
