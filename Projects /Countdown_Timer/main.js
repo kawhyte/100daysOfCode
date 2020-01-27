@@ -1,4 +1,4 @@
-let startTime = .1;
+let startTime = 25;
 let time = startTime * 60;
 // let isPaused = false;
 let isStarted = false;
