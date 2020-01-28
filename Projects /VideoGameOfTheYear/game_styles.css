@@ -27,8 +27,8 @@ button {
 
 
 header {
-  background-color: rgb(78, 24, 78);
-  background-image: url(https://images.unsplash.com/photo-1494666144702-70d86c6cf884?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+  background-color: black;
+  /* background-image: url(https://images.unsplash.com/photo-1494666144702-70d86c6cf884?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80); */
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
@@ -45,7 +45,7 @@ header {
 
 
 .logo-container {
-  margin: 30px 0px 10px 41px;
+  margin: 30px 0px 0px 41px;
   /* background: lightpink; */
   display: flex;
   height: 7vh;
@@ -54,7 +54,7 @@ header {
 .logo-img {
   /* background: lightgreen; */
   margin: 0px; 
-  height: 100%;
+  height: 70%;
   /* filter: white; */
   /* color: white; */
 }
@@ -76,7 +76,7 @@ header {
 
 .main-text h1{
   /* background: red; */
-  margin: 0px 0px 5px 0px;
+  margin: 0px ;
   font-weight: 900;
   font-size: 50px;
 }
@@ -191,7 +191,7 @@ flex:1;
   justify-content: flex-end;
  
   text-align: end;
-  margin: 0px 70px 0px 0px;
+  margin: 33px 60px 0px 0px;
  }
 
  #about{
@@ -291,3 +291,8 @@ font-weight:50;
    display: flex;
    flex:2;
  } */ 
+
+
+ .filter{
+   min-width: 600px;
+ }

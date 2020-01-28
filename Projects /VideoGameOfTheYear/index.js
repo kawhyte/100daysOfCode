@@ -69,7 +69,7 @@ const gallery = document.querySelector(".game-gallery");
 function generateHTML(data) {
   console.log("inside generate " + data.background_image);
   return `
-  <article class="fl w-100 w-50-m  w-25-ns pa2-ns">
+  <article class="fl w-100 w-50-m w-25-ns pa2-ns">
               <div class="aspect-ratio aspect-ratio--1x1">
                 <img style="background-image:url(${data.background_image});" 
                 class="db bg-center cover aspect-ratio--object" />
@@ -133,17 +133,108 @@ const data = [
 // gallery.innerHTML = html;
 
 let urls = [
-  "https://api.rawg.io/api/games/9767",
-  "https://api.rawg.io/api/games/27984",
-  "https://api.rawg.io/api/games/3498",
-  "https://api.rawg.io/api/games/3498",
-  "https://api.rawg.io/api/games/27984",
-  "https://api.rawg.io/api/games/27984",
-  "https://api.rawg.io/api/games/27984",
-  "https://api.rawg.io/api/games/27984"
-];
+  "PISTOL-WHIP",
+  "HYPNOSPACE-OUTLAW",
+  "ISLANDERS",
+  "DIVISION-2",
+  "NEW-SUPER-MARIO-BROS-U-DELUXE",
+  "BLOODSTAINED-RITUAL-OF-THE-NIGHT",
+  "jedi-the-fallen-order",
+  "kind-words-lo-fi-chill-beats-to-write-to",
+  "STEAMWORLD-QUEST",
+  "UNTITLED-GOOSE-GAME",
+  "DRAGON-QUEST-BUILDERS-2",
+  "THE-LEGEND-OF-ZELDA-LINKS-AWAKENING",
+  "EASTSHADE",
+  "ASTRAL-CHAIN",
+  "GRINDSTONE",
+  "SLAY-THE-SPIRE",
+  "sky-light-awaits",
+  "pokemon-2019",
+  "GEARS-5",
+  "SUPER-MARIO-MAKER-2",
+  "LONELY-MOUNTAINS-DOWNHILL",
+  "REMNANT-FROM-THE-ASHES",
+  "VOID-BASTARDS",
+  "TELLING-LIES",
+  "TETRIS-99",
+  "WHAT-THE-GOLF",
+  "DISCO-ELYSIUM",
+  "cadence-of-hyrule",
+  "final-fantasy-xiv-shadowbringers",
+  "CARD-OF-DARKNESS",
+  "man-of-medan",
+  "WILMOTS-WAREHOUSE",
+  "DEVIL-MAY-CRY-5",
+  "MORDHAU",
+  "MANIFOLD-GARDEN",
+  "TOTAL-WAR-THREE-KINGDOMS",
+  "TEAMFIGHT-TACTICS",
+  "FIRE-EMBLEM-THREE-HOUSES",
+  "APEX-LEGENDS",
+  "SAYONARA-WILD-HEARTS",
+  "A-SHORT-HIKE",
+  "RESIDENT-EVIL-2",
+  "DEATH-STRANDING",
+  "THE-OUTER-WORLDS",
+  "LUIGIS-MANSION-3",
+  "SHADOWS-DIE-TWICE",
+  "BABA-IS-YOU",
+  "DEVOTION",
+  "CONTROL",
+  "OUTER-WILDS"
+].map((game ,i) =>{
+return `https://api.rawg.io/api/games/${game}`
+});
 
-Promise.all(urls.map(url => fetch(url)))
+
+
+
+
+
+// [
+//   ("https://api.rawg.io/api/games/PISTOL-WHIP",
+//   "https://api.rawg.io/api/games/HYPNOSPACE-OUTLAW",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/division-2",
+//   "https://api.rawg.io/api/games/NEW-SUPER-MARIO-BROS-U-DELUXE",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/ISLANDERS",
+//   "https://api.rawg.io/api/games/9767",
+//   "https://api.rawg.io/api/games/27984",
+//   "https://api.rawg.io/api/games/3498",
+//   "https://api.rawg.io/api/games/3498",
+//   "https://api.rawg.io/api/games/27984",
+//   "https://api.rawg.io/api/games/27984",
+//   "https://api.rawg.io/api/games/27984")
+// ];
+
+const options = {
+  headers: new Headers({
+    Accept: "application/json",
+    Authorization: "Basic",
+    "Content-Type": "application/x-www-form-urlencoded",
+    Host: "api.rawg.io",
+    "User-Agent": "Video Game Of the Year/hulkbaby2@gmail.com"
+  }),
+  method: "GET"
+};
+
+Promise.all(urls.map(url => fetch(url, options)))
   .then(resp => Promise.all(resp.map(r => r.json())))
   .then(data => {
     console.log(data);
