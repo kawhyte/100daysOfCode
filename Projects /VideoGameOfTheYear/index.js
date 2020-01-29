@@ -67,24 +67,48 @@ const gallery = document.querySelector(".game-gallery");
 //     const overlayClose = overlay.querySelector('.close');
 //          // <img src="images/${randomNumber(12)}.jpg">
 function generateHTML(data) {
-  console.log("inside generate " + data.background_image);
+  //console.log("inside generate " + data.ratings[0].count);
+  const name  = data.name;
+  let rating = (data.rating)*2;
+
+
+  const background_image = data.background_image;
+  const released  = data.released
   return `
-  <a href="https://geo.itunes.apple.com/us/movie/primer/id536457427?at=1l3vqFJ&ct=1l3vqFJ&mt=6" class="fl w-50 w-25-l link overflow-hidden">
-  <div role="img" aria-label="Primer movie" class="grow aspect-ratio--4x6 " style="background: url(${data.background_image}) no-repeat center center; background-size: cover;"></div>
-</a>
+  <a href="https://geo.itunes.apple.com/us/movie/primer/id536457427?at=1l3vqFJ&ct=1l3vqFJ&mt=6"
+      class="fl w-50 w-25-l link overflow-hidden">
+      <div class="words ">
+        <article class="">
+          <div>
+            <h3 class="main-title mt1 fw2 f2 game-title">${name}</h3>
+          </div>
+          <div class="">
+            <h1 class="f3 br-pill ph3 pv2 ma3 dib white bg-dark-pink">${rating = rating === 0? "NA": rating}</h1>
+            <p class="game-title tracked">Release date: ${released}</p>
+            <p class="game-title tracked">ESRG rating ${"Yes"}</p>
+          </div>
+        </article>
+      </div>
+      <div role="img" aria-label="${name}" class="grow aspect-ratio--4x6 o-80"
+        style="background: url(${background_image}) no-repeat center center; background-size: cover; ">
+      </div>
+    </a>
 `;
 }
 
-{/* <article>
+{
+  /* <article>
 <img src="${data.background_image}" alt="Sample photo">
 <div class="text">
   <h3>${data.name}</h3>
   <p>Release Date: ${data.released}</p>
   <a href="${data.website}" class="btn btn-primary btn-block">Here's why</a>
 </div>
-</article> */}
+</article> */
+}
 
-{/* <div class="fl w-50 w-25-m w-20-l pa2">
+{
+  /* <div class="fl w-50 w-25-m w-20-l pa2">
 <a href="https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
   <img src="${data.background_image}" alt="Frank Ocean Blonde Album Cover" class="w-100 db outline black-10"/>
   <dl class="mt2 f6 lh-copy">
@@ -94,8 +118,9 @@ function generateHTML(data) {
     <dd class="ml0 gray truncate w-100">Frank Ocean</dd>
   </dl>
 </a>
-</div> */}
-  /* <article class="fl w-100 w-75-m w-25-ns pa2-ns">
+</div> */
+}
+/* <article class="fl w-100 w-75-m w-25-ns pa2-ns">
               <div class="aspect-ratio aspect-ratio--1x1">
                 <img style="background-image:url(${data.background_image});" 
                 class="db bg-center cover aspect-ratio--object" />
@@ -242,26 +267,26 @@ let urls = [
 //   "https://api.rawg.io/api/games/27984")
 // ];
 
-// const options = {
-//   headers: new Headers({
-//     Accept: "application/json",
-//     Authorization: "Basic",
-//     "Content-Type": "application/x-www-form-urlencoded",
-//     Host: "api.rawg.io",
-//     "User-Agent": "Video Game Of the Year/hulkbaby2@gmail.com"
-//   }),
-//   method: "GET"
-// };
+const options = {
+  headers: new Headers({
+    Accept: "application/json",
+    Authorization: "Basic",
+    "Content-Type": "application/x-www-form-urlencoded",
+    Host: "api.rawg.io",
+    "User-Agent": "Video Game Of the Year/hulkbaby2@gmail.com"
+  }),
+  method: "GET"
+};
 
-// Promise.all(urls.map(url => fetch(url, options)))
-//   .then(resp => Promise.all(resp.map(r => r.json())))
-//   .then(data => {
-//     console.log(data);
+Promise.all(urls.map(url => fetch(url, options)))
+  .then(resp => Promise.all(resp.map(r => r.json())))
+  .then(data => {
+    console.log(data);
 
-//     const html = data.map(generateHTML).join("");
-//     console.log(html);
-//     gallery.innerHTML = html;
-//   });
+    const html = data.map(generateHTML).join("");
+    console.log(html);
+    gallery.innerHTML = html;
+  });
 
 // fetch("https://api.rawg.io/api/games")
 //   //fetch("https://api.rawg.io/api/games?page_size=1&game=9767,27984")
