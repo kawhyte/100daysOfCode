@@ -68,8 +68,31 @@ const gallery = document.querySelector(".game-gallery");
 //          // <img src="images/${randomNumber(12)}.jpg">
 function generateHTML(data) {
   console.log("inside generate " + data.background_image);
-  return `
-  <article class="fl w-100 w-50-m w-25-ns pa2-ns">
+  return `<article>
+  <img src="${data.background_image}" alt="Sample photo">
+  <div class="text">
+    <h3>${data.name}</h3>
+    <p>${data.reddit_description}</p>
+    <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Here's why</a>
+  </div>
+</article>
+`;
+}
+
+
+
+{/* <div class="fl w-50 w-25-m w-20-l pa2">
+<a href="https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
+  <img src="${data.background_image}" alt="Frank Ocean Blonde Album Cover" class="w-100 db outline black-10"/>
+  <dl class="mt2 f6 lh-copy">
+    <dt class="clip">${data.name}</dt>
+    <dd class="ml0 black truncate w-100">Blonde</dd>
+    <dt class="clip">Artist</dt>
+    <dd class="ml0 gray truncate w-100">Frank Ocean</dd>
+  </dl>
+</a>
+</div> */}
+  /* <article class="fl w-100 w-75-m w-25-ns pa2-ns">
               <div class="aspect-ratio aspect-ratio--1x1">
                 <img style="background-image:url(${data.background_image});" 
                 class="db bg-center cover aspect-ratio--object" />
@@ -78,9 +101,7 @@ function generateHTML(data) {
                 <h3 class="f5 f4-ns mb0 black-90">${data.name}</h3>
                 <h3 class="f6 f5 fw4 mt2 black-60">Subtitle of piece</h3>
               </a>
-  </article>
-      `;
-}
+  </article> */
 
 //  <div class="fl w-50 w-30-m w-25-l pa2">
 //     <a href="" class="db link dim tc">
@@ -94,39 +115,39 @@ function generateHTML(data) {
 //     </a>
 //   </div>
 
-const data = [
-  {
-    photolink:
-      "http://is2.mzstatic.com/image/thumb/Music18/v4/5a/42/0f/5a420f73-6490-abc9-bdcc-3001d5c4e9fc/source/400x40000bb.png",
-    gameName: "Mario Maker 2",
-    year: "2019",
-    alt: "gameAlt"
-  },
-  {
-    photolink:
-      "http://is3.mzstatic.com/image/thumb/Music62/v4/fa/ae/a6/faaea65f-0819-bb5d-afaa-4f5e84015204/source/400x40000bb.png",
-    gameName: "Mario Brothers",
-    year: "1997"
-  },
-  {
-    photolink:
-      "http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png",
-    gameName: "Mario Brothers 2",
-    year: "1997"
-  },
-  {
-    photolink:
-      "http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png",
-    gameName: "Mario Brothers 2",
-    year: "1997"
-  },
-  {
-    photolink:
-      "http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png",
-    gameName: "Mario Brothers 2",
-    year: "1997"
-  }
-];
+// const data = [
+//   {
+//     photolink:
+//       "http://is2.mzstatic.com/image/thumb/Music18/v4/5a/42/0f/5a420f73-6490-abc9-bdcc-3001d5c4e9fc/source/400x40000bb.png",
+//     gameName: "Mario Maker 2",
+//     year: "2019",
+//     alt: "gameAlt"
+//   },
+//   {
+//     photolink:
+//       "http://is3.mzstatic.com/image/thumb/Music62/v4/fa/ae/a6/faaea65f-0819-bb5d-afaa-4f5e84015204/source/400x40000bb.png",
+//     gameName: "Mario Brothers",
+//     year: "1997"
+//   },
+//   {
+//     photolink:
+//       "http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png",
+//     gameName: "Mario Brothers 2",
+//     year: "1997"
+//   },
+//   {
+//     photolink:
+//       "http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png",
+//     gameName: "Mario Brothers 2",
+//     year: "1997"
+//   },
+//   {
+//     photolink:
+//       "http://is2.mzstatic.com/image/thumb/Music18/v4/34/03/34/34033451-12e2-2d0b-c100-11a390922a01/source/400x40000bb.png",
+//     gameName: "Mario Brothers 2",
+//     year: "1997"
+//   }
+// ];
 
 // const html = data.map(generateHTML).join("");
 
@@ -183,14 +204,9 @@ let urls = [
   "DEVOTION",
   "CONTROL",
   "OUTER-WILDS"
-].map((game ,i) =>{
-return `https://api.rawg.io/api/games/${game}`
+].map((game, i) => {
+  return `https://api.rawg.io/api/games/${game}`;
 });
-
-
-
-
-
 
 // [
 //   ("https://api.rawg.io/api/games/PISTOL-WHIP",

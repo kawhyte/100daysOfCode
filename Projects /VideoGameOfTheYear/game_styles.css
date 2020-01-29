@@ -8,7 +8,9 @@
 body {
   font-family: 'Poppins', sans-serif;
  
- 
+  /* margin: 10 auto; */
+  /* max-width: 56em; */
+  /* padding: 1em 0; */
  
 }
 
@@ -213,7 +215,7 @@ flex:1;
   
  }
 
- .main-area{
+ /* .main-area{
 background: lightcoral;
   display: flex;
  width: 95%;
@@ -222,27 +224,53 @@ background: lightcoral;
  align-items: flex-start;
  }
 
- .left-side{
+ .left-side{ */
 
 /* background: lightseagreen; */
-flex:.7;
+/* flex:.7;
 margin:40px 20px 0px 0px;
 height: 60vh;
- }
+ } */
 
- .left-side h1{
+ /* .left-side h1{
 font-size: 27px;
 font-weight:50;
  }
  .left-side p{
   font-size: 16px;
   font-weight:50;
-   }
+   } */
    
+
+
+
+ .btn{
+
+  height: 33px;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 10px;
+  color:white;
+  background-color: rgb(194, 86, 193);
+  border: none;
+ }
+
+
+ /* .foot-link{
+
+  list-style: none;
+  text-decoration: none;
+ } */
+ /* section{
+   display: flex;
+   flex:2;
+ } */ 
+
+ 
  .right-side{
   /* background: rgb(57, 216, 33); */
   flex:3;
-  margin: 40px 0px 0px 10px;
+  margin: 10px 0px 0px 10px;
   /* background: linear-gradient(to right, #F93D66, #6D47D9); */
  }
 
@@ -257,42 +285,30 @@ font-weight:50;
  
   
  }
-
- .btn{
-
-  height: 33px;
-  font-size: 16px;
-  text-align: left;
-  padding-left: 10px;
-  color:white;
-  background-color: rgb(194, 86, 193);
-  border: none;
- }
-
- .foot-links{
-  /* background-color: rgb(194, 86, 193); */
-   display: flex;
-   align-content: space-around;
-   display: flex;
-   justify-content: space-evenly;
-   list-style: none;
-   width:25%;
-   margin-left: 15px;
-   
- 
- }
-
- .foot-link{
-
-  list-style: none;
-  text-decoration: none;
- }
- /* section{
-   display: flex;
-   flex:2;
- } */ 
-
-
- .filter{
+ /* .filter{
    min-width: 600px;
- }
+ } */
+
+.container{
+  padding: 30px 10px 30px 100px;
+}
+ .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article img {
+  max-width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
+
