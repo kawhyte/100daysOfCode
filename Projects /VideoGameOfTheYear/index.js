@@ -68,18 +68,21 @@ const gallery = document.querySelector(".game-gallery");
 //          // <img src="images/${randomNumber(12)}.jpg">
 function generateHTML(data) {
   console.log("inside generate " + data.background_image);
-  return `<article>
-  <img src="${data.background_image}" alt="Sample photo">
-  <div class="text">
-    <h3>${data.name}</h3>
-    <p>${data.reddit_description}</p>
-    <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Here's why</a>
-  </div>
-</article>
+  return `
+  <a href="https://geo.itunes.apple.com/us/movie/primer/id536457427?at=1l3vqFJ&ct=1l3vqFJ&mt=6" class="fl w-50 w-25-l link overflow-hidden">
+  <div role="img" aria-label="Primer movie" class="grow aspect-ratio--4x6 " style="background: url(${data.background_image}) no-repeat center center; background-size: cover;"></div>
+</a>
 `;
 }
 
-
+{/* <article>
+<img src="${data.background_image}" alt="Sample photo">
+<div class="text">
+  <h3>${data.name}</h3>
+  <p>Release Date: ${data.released}</p>
+  <a href="${data.website}" class="btn btn-primary btn-block">Here's why</a>
+</div>
+</article> */}
 
 {/* <div class="fl w-50 w-25-m w-20-l pa2">
 <a href="https://geo.itunes.apple.com/us/album/blonde/id1146195596?at=1l3vqFJ&mt=1&app=music" class="db link dim tc">
@@ -239,26 +242,26 @@ let urls = [
 //   "https://api.rawg.io/api/games/27984")
 // ];
 
-const options = {
-  headers: new Headers({
-    Accept: "application/json",
-    Authorization: "Basic",
-    "Content-Type": "application/x-www-form-urlencoded",
-    Host: "api.rawg.io",
-    "User-Agent": "Video Game Of the Year/hulkbaby2@gmail.com"
-  }),
-  method: "GET"
-};
+// const options = {
+//   headers: new Headers({
+//     Accept: "application/json",
+//     Authorization: "Basic",
+//     "Content-Type": "application/x-www-form-urlencoded",
+//     Host: "api.rawg.io",
+//     "User-Agent": "Video Game Of the Year/hulkbaby2@gmail.com"
+//   }),
+//   method: "GET"
+// };
 
-Promise.all(urls.map(url => fetch(url, options)))
-  .then(resp => Promise.all(resp.map(r => r.json())))
-  .then(data => {
-    console.log(data);
+// Promise.all(urls.map(url => fetch(url, options)))
+//   .then(resp => Promise.all(resp.map(r => r.json())))
+//   .then(data => {
+//     console.log(data);
 
-    const html = data.map(generateHTML).join("");
-    console.log(html);
-    gallery.innerHTML = html;
-  });
+//     const html = data.map(generateHTML).join("");
+//     console.log(html);
+//     gallery.innerHTML = html;
+//   });
 
 // fetch("https://api.rawg.io/api/games")
 //   //fetch("https://api.rawg.io/api/games?page_size=1&game=9767,27984")

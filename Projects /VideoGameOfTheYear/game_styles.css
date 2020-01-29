@@ -290,7 +290,7 @@ font-weight:50;
  } */
 
 .container{
-  padding: 30px 10px 30px 100px;
+  padding: 10px ;
 }
  .grid {
   display: grid;
@@ -312,3 +312,16 @@ font-weight:50;
   padding: 20px;
 }
 
+
+p {
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 600px;
+}
+
+.words{
+  position:absolute;
+  z-index: 99;
+  background-color: aqua;
+}
